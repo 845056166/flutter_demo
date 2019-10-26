@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './Route.dart';
+import './Example.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -200,10 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final _widgetOptions = {
     TabThree(),
     FirstScreen(),
-    Image.asset(
-      'images/iu-006.jpg',
-      fit: BoxFit.cover,
-    ),
+    new Example(),
   };
   final TextConfig = [
     Text('消息'),
