@@ -3,6 +3,8 @@ import './examples//listView.dart' as commonListView;
 import './examples//longListView.dart';
 import 'Grid.dart';
 import './examples//form.dart';
+import './examples/tabBar.dart';
+// import './examples/tabBarHard.dart';
 
 void main() => runApp(new Example());
 
@@ -21,12 +23,12 @@ class Example extends StatelessWidget {
 }
 
 class MyExampleList extends StatefulWidget {
+
   @override
   _MyExampleListState createState() => new _MyExampleListState();
 }
 
 class _MyExampleListState extends State<MyExampleList> {
-  
   // List<Map> newList() {
   //   return new Lis;
   // }
@@ -99,6 +101,38 @@ class _MyExampleListState extends State<MyExampleList> {
               },
             ),
           ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('选项卡(simple)'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new Tabbar()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          // Container(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: RaisedButton(
+          //     child: Text('选项卡(hard)'),
+          //     onPressed: () => {
+          //       Navigator.push(
+          //         context, 
+          //         new MaterialPageRoute(
+          //           builder: (context) => new tabBarHard()
+          //             // items: ['1','2','3','4','5','6'],
+          //         ),
+          //       )
+          //       // Navigator.pushNamed(context, '/list')
+          //     },
+          //   ),
+          // ),
         ],
     );
   }

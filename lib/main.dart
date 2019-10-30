@@ -198,6 +198,7 @@ class TabThree extends StatelessWidget {
 }
 class _MyHomePageState extends State<MyHomePage> {
   int _selectIndex = 0;
+
   final _widgetOptions = {
     TabThree(),
     FirstScreen(),
@@ -215,6 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: TextConfig[_selectIndex],
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.camera),

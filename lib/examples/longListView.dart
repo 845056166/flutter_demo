@@ -28,7 +28,6 @@ class LongListView extends StatelessWidget {
             );
           },
         ),
-      ),
     );
   }
 }
