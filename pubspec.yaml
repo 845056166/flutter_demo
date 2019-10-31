@@ -49,6 +49,8 @@ flutter:
    - images/iu-002.jpg
    - images/iu-006.jpg
    - images/lee_ji_eun-002.jpg
+   - images/iuAvatar.jpg
+   - images/lee_ji_eun-002.jpg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see

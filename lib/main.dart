@@ -142,7 +142,8 @@ class TabThree extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: CircleAvatar(
-              backgroundImage: NetworkImage('https://img.ivsky.com/img/bizhi/pre/201605/24/iu-003.jpg'),
+              backgroundImage: NetworkImage('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4237373414,931758554&fm=26&gp=0.jpg'),
+              foregroundColor: Colors.green,
             ),
             title: Text('IU(李智恩)'),
             subtitle: Text('撒浪嘿'),
@@ -226,6 +227,47 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.white,
           )
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text(
+                '愿'
+              ),
+              accountEmail: Text(
+                '845056166@qq.com',
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: new NetworkImage('https://q1.qlogo.cn/g?b=qq&s=100&nk=845056166'),
+              ),
+              onDetailsPressed: () {},
+              otherAccountsPictures: <Widget>[
+                Container(
+                  child: Image.asset('images/iuAvator.jpeg'),
+                )
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.color_lens),
+              ),
+              title: Text('个性装扮'),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.photo),
+              ),
+              title: Text('我的相册'),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.wifi),
+              ),
+              title: Text('免流量特权'),
+            ),
+          ],
+        ),
       ),
       body: Container(
         child: _widgetOptions.elementAt(_selectIndex),

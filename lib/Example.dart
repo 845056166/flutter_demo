@@ -4,7 +4,7 @@ import './examples//longListView.dart';
 import 'Grid.dart';
 import './examples//form.dart';
 import './examples/tabBar.dart';
-// import './examples/tabBarHard.dart';
+import './examples/tabBarHard.dart';
 
 void main() => runApp(new Example());
 
@@ -117,22 +117,22 @@ class _MyExampleListState extends State<MyExampleList> {
               },
             ),
           ),
-          // Container(
-          //   padding: const EdgeInsets.all(8.0),
-          //   child: RaisedButton(
-          //     child: Text('选项卡(hard)'),
-          //     onPressed: () => {
-          //       Navigator.push(
-          //         context, 
-          //         new MaterialPageRoute(
-          //           builder: (context) => new tabBarHard()
-          //             // items: ['1','2','3','4','5','6'],
-          //         ),
-          //       )
-          //       // Navigator.pushNamed(context, '/list')
-          //     },
-          //   ),
-          // ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('选项卡(hard)'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new tabBarHard()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
         ],
     );
   }
