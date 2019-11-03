@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './Route.dart';
 import './Example.dart';
+import './layouts.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -202,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final _widgetOptions = {
     TabThree(),
-    FirstScreen(),
+    Layouts(),
     new Example(),
   };
   final TextConfig = [
@@ -221,10 +223,12 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.camera),
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.add),
             color: Colors.white,
+            onPressed: () {},
           )
         ],
       ),
@@ -244,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onDetailsPressed: () {},
               otherAccountsPictures: <Widget>[
                 Container(
-                  child: Image.asset('images/iuAvator.jpeg'),
+                  child: Image.asset('images/iuAvatar.jpg'),
                 )
               ],
             ),
@@ -277,6 +281,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('信息')),
           BottomNavigationBarItem(icon: Icon(Icons.contacts), title: Text('联系人')),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('发现')),
+          // BottomNavigationBarItem(icon: Icon(Icons.computer), title: Text('Cupertino')),
         ],
         currentIndex: _selectIndex,
         fixedColor: Colors.deepPurple,

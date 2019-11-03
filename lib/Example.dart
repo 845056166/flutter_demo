@@ -5,8 +5,16 @@ import 'Grid.dart';
 import './examples//form.dart';
 import './examples/tabBar.dart';
 import './examples/tabBarHard.dart';
+import './examples/popMenu.dart';
+import './examples/simpleDialog.dart';
+import './examples/alertDialog.dart';
+import './examples//textField.dart';
+import './examples/Card.dart';
+import './examples//Cupertino.dart';
+import './examples//cupertinoDialog.dart';
 
 void main() => runApp(new Example());
+
 
 class Example extends StatelessWidget {
   @override
@@ -27,6 +35,7 @@ class MyExampleList extends StatefulWidget {
   @override
   _MyExampleListState createState() => new _MyExampleListState();
 }
+
 
 class _MyExampleListState extends State<MyExampleList> {
   // List<Map> newList() {
@@ -126,6 +135,118 @@ class _MyExampleListState extends State<MyExampleList> {
                   context, 
                   new MaterialPageRoute(
                     builder: (context) => new tabBarHard()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('pop弹出菜单'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new PopMenu()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('简单的对话框'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new simpleDialog()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('提示对话框'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new MyAlertDialog()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('文本框'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new textField()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('卡片'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new MyCard()
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('CupertinoActivityIndicator'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new CupertinoComponents(),
+                      // items: ['1','2','3','4','5','6'],
+                  ),
+                )
+                // Navigator.pushNamed(context, '/list')
+              },
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8.0),
+            child: RaisedButton(
+              child: Text('CupertinoDialog'),
+              onPressed: () => {
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new MyCupertinoDialog(),
                       // items: ['1','2','3','4','5','6'],
                   ),
                 )

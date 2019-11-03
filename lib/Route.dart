@@ -179,31 +179,61 @@ class FirstScreen extends StatelessWidget {
                   'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situated 1,578 meters above sea level, it is one of the larger Alpine Lakes. A gondola ride from Kandersteg, followed by a half-hour walk through pastures and pine forest, leads you to the lake, which warms to 20 degrees Celsius in the summer. Activities enjoyed here include rowing, and riding the summer toboggan run.',
                   softWrap: true,
                 ),
+              ),
+              FlatButton(
+                onPressed: () {
+                  print('你点击了扁平按钮');
+                },
+                child: Text('扁平按钮'),
               )
             ],
           ),
-          persistentFooterButtons: 
-          <Widget>[
-            SizedBox(
-              child: 
-                RaisedButton(
-                  child: Text(
-                    'Click Button',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+          floatingActionButton: FloatingActionButton(
+              child: Text('跳转'),
+              tooltip: "请点击FloattingActionButton",
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              elevation: 7.0,
+              highlightElevation: 14.0,
+              onPressed: () {
+                Scaffold.of(context).showSnackBar(
+                  new SnackBar(
+                    content: Text('你点击了FloatActionButton'),
                   ),
-                  onPressed: () => {
-                    Navigator.push(
-                      context, 
-                      new MaterialPageRoute(
-                        builder: (context) => new SecondPage()
-                      )
-                    )
-                  }
-              ),
-            )
-          ],
+                );
+                Navigator.push(
+                  context, 
+                  new MaterialPageRoute(
+                    builder: (context) => new SecondPage()
+                  )
+                );
+              },
+              mini: false,
+              shape: new CircleBorder(),
+              isExtended: false,
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+          // <Widget>[
+          //   SizedBox(
+          //     child: 
+          //       RaisedButton(
+          //         child: Text(
+          //           'Click Button',
+          //           style: TextStyle(
+          //             color: Colors.white,
+          //           ),
+          //         ),
+          //         onPressed: () => {
+          //           Navigator.push(
+          //             context, 
+          //             new MaterialPageRoute(
+          //               builder: (context) => new SecondPage()
+          //             )
+          //           )
+          //         }
+          //     ),
+          //   )
+          // ],
     );
   }
 }
