@@ -38,7 +38,7 @@ class MySizedBox extends StatelessWidget {
       ),
       body: SizedBox(
         width: 200.0,
-        height: 300.0,
+        height: 200.0,
         child: Card(
           child: Text(
             'SizesBox',

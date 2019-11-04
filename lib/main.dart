@@ -204,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final _widgetOptions = {
     TabThree(),
-    Layouts(),
+    MyLayout(),
     new Example(),
   };
   final TextConfig = [
