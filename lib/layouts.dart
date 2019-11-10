@@ -1,5 +1,5 @@
 import 'package:flutter/Material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/widgets.dart';
 import './Layouts/Container.dart';
 import './Layouts/MyPadding.dart';
@@ -8,6 +8,7 @@ import './Layouts//MyFittedBox.dart';
 import './Layouts//MyStackAli.dart';
 import './Layouts/MyOverflowBox.dart';
 import './Layouts/MyConstrainedBox.dart';
+import './examples/Http_demo.dart';
 
 class MyLayout extends StatefulWidget {
 
@@ -21,14 +22,14 @@ class MyLayout extends StatefulWidget {
 class _MyLayoutState extends State<MyLayout>{
 
   bool offstage = false;
-//   _launchURL() async {
-//   const url = 'https://www.baidu.com';
-//   if (await canLaunch(url)) {
-//     await launch(url);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
+  _launchURL() async {
+  const url = 'https://www.baidu.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -238,6 +239,18 @@ class _MyLayoutState extends State<MyLayout>{
                     );
                   },
                 ),
+                FlatButton(
+                  child: Text('HTTP request'),
+                  onPressed: () {
+                    Navigator.push(
+                      context, 
+                      new MaterialPageRoute(
+                        builder: (context) => new HttpDemo(),
+                          // items: ['1','2','3','4','5','6'],
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -248,7 +261,7 @@ class _MyLayoutState extends State<MyLayout>{
           setState(() {
             offstage = !offstage;
           });
-          // _launchURL();
+          _launchURL();
         },
         tooltip: '显示隐藏',
         child: Icon(Icons.flight),

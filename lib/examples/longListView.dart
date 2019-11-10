@@ -22,9 +22,20 @@ class LongListView extends StatelessWidget {
         body: new ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index){
-            return new ListTile(
-              leading:Icon(Icons.phone),
-              title: Text(items[index]),
+            final item = items[index];
+            return new Dismissible(
+              key: new Key(item),
+              onDismissed: (direction) {
+                items.removeAt(index);
+                // 底部弹出当前项被删除了
+                Scaffold.of(context).showSnackBar(
+                  new SnackBar(content: Text('$item 被删除了'),)
+                );
+              },
+              child: new ListTile(
+                leading:Icon(Icons.phone),
+                title: Text(items[index]),
+              ),
             );
           },
         ),
