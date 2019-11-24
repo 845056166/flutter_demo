@@ -6,7 +6,6 @@ import 'dart:io';
 class HttpDemo extends StatefulWidget {
   @override
   _HttpDemo createState() => new _HttpDemo();
-
 }
 class _HttpDemo extends State<HttpDemo> {
    getResult() async {
@@ -22,7 +21,7 @@ class _HttpDemo extends State<HttpDemo> {
           result = data['origin'];
         } else {
           result =
-              'Error getting IP address:\nHttp status ${response.statusCode}';
+          'Error getting IP address:\nHttp status ${response.statusCode}';
         }
       } catch (exception) {
         result = '${exception} Failed getting IP address';
