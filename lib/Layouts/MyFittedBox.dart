@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyFittedBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('缩放布局'),

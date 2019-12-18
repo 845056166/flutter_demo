@@ -9,7 +9,7 @@ class HttpDemo extends StatefulWidget {
 }
 class _HttpDemo extends State<HttpDemo> {
    getResult() async {
-    var url = 'https://httpbin.org/image';
+    var url = 'http://localhost:8000/';
       var httpClient = new HttpClient();
       String result;
       try {
@@ -24,14 +24,13 @@ class _HttpDemo extends State<HttpDemo> {
           'Error getting IP address:\nHttp status ${response.statusCode}';
         }
       } catch (exception) {
-        result = '${exception} Failed getting IP address';
+        result = '$exception Failed getting IP address';
       }
       print('result: $result');
       return result;
   }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('http demo'),

@@ -8,7 +8,6 @@ class Tabbar extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new MaterialApp(
       home: DefaultTabController(
         length: myTabs.length,

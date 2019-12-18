@@ -17,7 +17,7 @@ class DemoStateLess extends StatelessWidget {
   }
 }
 
-/**
+/*
  * 你需要创建管理的是主要是 State ， 
  * 通过 State 的 build 方法去构建控件。
  * 在 State 中，你可以动态改变数据，这类似 MVVM 实现，在 setState 之后，改变的数据会触发 Widget 重新构建刷新。
@@ -36,7 +36,7 @@ class DemoStatefull extends StatefulWidget {
 
   ///主要是负责创建state
   @override
-  _DemoStatefullState createState() => _DemoStatefullState();
+  _DemoStatefullState createState() => _DemoStatefullState('qqq');
 }
 
 class _DemoStatefullState extends State<DemoStatefull> {

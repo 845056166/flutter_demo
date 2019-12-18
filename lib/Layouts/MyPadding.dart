@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('padding填充布局'),

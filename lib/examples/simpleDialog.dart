@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class simpleDialog extends StatelessWidget {
+class SimpledialogDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('简单对话框'),

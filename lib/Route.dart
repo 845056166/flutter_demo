@@ -69,8 +69,7 @@ class MyApp extends StatelessWidget {
 class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    Color color = Theme.of(context).primaryColor; 
+    // Color color = Theme.of(context).primaryColor; 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -137,7 +136,7 @@ class FirstScreen extends StatelessWidget {
           ),
         ],
       );
-    };
+    }
     Widget buttonSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

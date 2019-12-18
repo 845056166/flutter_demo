@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyStackAlign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Stack'),
@@ -38,7 +37,6 @@ class MyStackAlign extends StatelessWidget {
 class MyStackPosition extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(title: Text('定位布局'),),
       body: Center(
@@ -67,7 +65,6 @@ class MyStackPosition extends StatelessWidget {
 class IndexStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('Stack'),

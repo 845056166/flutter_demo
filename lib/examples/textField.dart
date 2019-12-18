@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 
 
 
-class textField extends StatelessWidget {
+class TextFieldDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController mycontroller = TextEditingController();
     mycontroller.addListener(() {
       print('你输入的内容为：${mycontroller.text}');
     });
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('textField')

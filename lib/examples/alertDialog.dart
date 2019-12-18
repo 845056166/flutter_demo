@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text('AlertDialog 对话框'),

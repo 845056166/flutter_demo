@@ -106,7 +106,7 @@ class _ListpullState extends State<Listpull> {
     String hour = _fixleng(now.hour.toString());
     String min = _fixleng(now.minute.toString());
     String sec = _fixleng(now.second.toString());
-    
+
     return "$hour:$min:$sec";
   }
   String _fixleng(String str) {
@@ -138,34 +138,34 @@ class _ListpullState extends State<Listpull> {
     _scrollController.dispose();
     super.dispose();
   }
-  _lisiWidget(List data) {
-    List<ListTile> list = new List(); 
-    data.forEach((item) {
-      list.add(new ListTile(
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(item['avatorURL']),
-            foregroundColor: Colors.green,
-          ),
-          title: Text(item['text']),
-          subtitle: Text(item['msg']),
-          trailing: Text(item['time']),
-        ),
-      );
-    });
-    // for(int i = 0; i < data.length;i++) {
-    //   list.add(new ListTile(
-    //       leading: CircleAvatar(
-    //         backgroundImage: NetworkImage(data[i]['avatorURL']),
-    //         foregroundColor: Colors.green,
-    //       ),
-    //       title: Text(data[i]['text']),
-    //       subtitle: Text(data[i]['msg']),
-    //       trailing: Text(data[i]['time']),
-    //     ),
-    //   );
-    // }
-    return list;
-  }
+  // _lisiWidget(List data) {
+  //   List<ListTile> list = new List(); 
+  //   data.forEach((item) {
+  //     list.add(new ListTile(
+  //         leading: CircleAvatar(
+  //           backgroundImage: NetworkImage(item['avatorURL']),
+  //           foregroundColor: Colors.green,
+  //         ),
+  //         title: Text(item['text']),
+  //         subtitle: Text(item['msg']),
+  //         trailing: Text(item['time']),
+  //       ),
+  //     );
+  //   });
+  //   // for(int i = 0; i < data.length;i++) {
+  //   //   list.add(new ListTile(
+  //   //       leading: CircleAvatar(
+  //   //         backgroundImage: NetworkImage(data[i]['avatorURL']),
+  //   //         foregroundColor: Colors.green,
+  //   //       ),
+  //   //       title: Text(data[i]['text']),
+  //   //       subtitle: Text(data[i]['msg']),
+  //   //       trailing: Text(data[i]['time']),
+  //   //     ),
+  //   //   );
+  //   // }
+  //   return list;
+  // }
   @override
   Widget build(BuildContext context) {
     return Container(

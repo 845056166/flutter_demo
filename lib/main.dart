@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './Route.dart';
+// import './Route.dart';
 import './Example.dart';
 import './layouts.dart';
 import './Layouts/pullDandU.dart';
@@ -9,7 +9,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       home: Scaffold(
         body: MyHomePage(),
@@ -28,12 +27,12 @@ class MyHomePage extends StatefulWidget{
 class _MyHomePageState extends State<MyHomePage> {
   int _selectIndex = 0;
 
-  final _widgetOptions = {
+  final List<Widget> _widgetOptions = [
     Listpull(),
     MyLayout(),
     new Example(),
-  };
-  final TextConfig = [
+  ];
+  final textConfig = [
     Text('消息'),
     Text('联系人'),
     Text('发现'),
@@ -41,10 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: TextConfig[_selectIndex],
+        title: textConfig[_selectIndex],
         centerTitle: true,
         actions: <Widget>[
           IconButton(

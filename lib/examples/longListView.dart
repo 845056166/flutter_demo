@@ -13,7 +13,6 @@ class LongListView extends StatelessWidget {
   LongListView({Key key, @required this.items}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     final title = '长列表';
     return Scaffold(
         appBar: AppBar(

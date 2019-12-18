@@ -32,7 +32,6 @@ class _MyLayoutState extends State<MyLayout>{
 }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       // appBar: AppBar(
       //   title: Text('布局')

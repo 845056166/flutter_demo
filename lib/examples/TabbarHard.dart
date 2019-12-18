@@ -12,7 +12,6 @@ class SelectView extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
       color: Colors.white,
       child: Column(
@@ -34,11 +33,10 @@ const List<ItemView> items = const <ItemView>[
   ItemView(title: "自驾6", icon: Icons.directions_car),
 ];
 
-class tabBarHard extends StatelessWidget {
+class TabBarHard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return DefaultTabController(
         length: items.length,
         child: Scaffold(

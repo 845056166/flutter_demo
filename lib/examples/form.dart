@@ -19,7 +19,6 @@ class _FormPageState extends State<FormPage> {
   }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar( title: Text('form 表单')),
       body: Column(
@@ -34,8 +33,8 @@ class _FormPageState extends State<FormPage> {
                     decoration: InputDecoration(
                       labelText: '请输入用户名',
                     ),
-                    onSaved: (value) => {
-                      userName = value
+                    onSaved: (value) {
+                      userName = value;
                     },
                     onFieldSubmitted: (value){
                       print(value);
